@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Pooq1{
+public class ContarLetras{
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		String texto;
@@ -8,7 +8,8 @@ public class Pooq1{
 		texto = texto.replace(" ", "");
 		Teste2 t = new Teste2();
 		t.selec(texto);
-
+		
+		sc.close();
 	}
 
 }
