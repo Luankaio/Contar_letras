@@ -10,6 +10,7 @@ public class Candidato{
         this.numero=numero;
         this.cargo=cargo;
     }
+    
     public void getCandidato(){
         System.out.println("Nome:"+this.nome);
         System.out.println("Número:"+this.numero);

@@ -8,8 +8,8 @@ public class ContarLetras{
 		texto = texto.replace(" ", "");
 		Teste2 t = new Teste2();
 		t.selec(texto);
-		
 		sc.close();
+		//fds
 	}
 
 }
