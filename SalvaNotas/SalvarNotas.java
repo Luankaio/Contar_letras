@@ -1,15 +1,16 @@
 package SalvaNotas;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public class SalvarNotas {
-    public static void main(String[] args){
+    public static void main(String[] args) throws IOException{
         Scanner sc = new Scanner(System.in);
         List<Notas> list = new ArrayList<>();
            
         for(String notes: LerTxt.prepareExistingNotes()){
-            list.add(new Notas(notes));
+            list.add(new Notas(notes, 3));
         } 
         int temp=-1;
         while(temp!=0){
@@ -22,23 +23,26 @@ public class SalvarNotas {
                     list.add(new Notas(sc.nextLine()));
                     break;
                 case 2:
-
+                    System.out.print("Escolha a posição:");
+                    temp = sc.nextInt();
+                    list.get(temp-1).getNotas();;
                     break;
                 case 3:
                     for(Notas notas: list){
-
-                        System.out.print("Nota"+ list.indexOf(notas) +": ");
+                        temp = list.indexOf(notas)+1;
+                        System.out.print("Nota"+ temp +": ");
                         notas.getNotas();
                     }
                     break;
                 case 4:
                     System.out.print("Escolha a posição da nota:");
-                    list.remove(sc.nextInt());
+                    temp = sc.nextInt();
+                    list.remove(temp-1);
                 default:
                     break;
                 }
             }
-        
+        list.size();
         // list.removeIf(x -> x.list(" "));
     
         sc.close();

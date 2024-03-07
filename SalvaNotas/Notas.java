@@ -9,14 +9,15 @@ public class Notas {
     private static String path = "/home/luank/desktop/poo_java/Contar_letras/SalvaNotas/notasSalvas";
 
 
-    public Notas(String nota){
+    public Notas(String nota) throws IOException{
         this.nota=nota;
-        try(BufferedWriter bw = new BufferedWriter(new FileWriter(path, true))){
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(path, true))) {
             bw.write(this.nota);
             bw.write('$');
-        }catch(IOException e){
-            e.printStackTrace();
         }
+    }
+    public Notas(String nota, int a){
+        this.nota=nota;
     }
 
     

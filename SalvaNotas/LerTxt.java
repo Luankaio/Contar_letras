@@ -15,9 +15,6 @@ public class LerTxt {
             try {
                 br = new BufferedReader(new FileReader(path));
                 line = br.readLine();
-                while(br.readLine() != null){
-                    line = line + br.readLine();
-                }
                 separated =  line.split("\\$");
                 br.close();
                 
